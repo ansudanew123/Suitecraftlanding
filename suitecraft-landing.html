@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SuiteCraft — AI Resume, Invoice, PDF & Image Tools in One Pass</title>
+  <meta name="description" content="SuiteCraft unifies an AI Resume Maker, Invoice Generator, PDF Suite, and AI Image Restorer in one fast, private toolkit. Free to start. No forced sign-ups, no bloated fees." />
+  <meta name="keywords" content="AI resume builder, invoice generator, PDF tools online, AI image upscaler, photo restoration, resume maker, quote generator" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0b1120" />
+  <link rel="canonical" href="https://suitecraft.app/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='3'%3E%3Cpath d='M14 4h6v6h-6z'/%3E%3Cpath d='M4 14h6v6H4z'/%3E%3Cpath d='M4 4h6v6H4z'/%3E%3C/svg%3E" />
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:site_name" content="SuiteCraft" />
+  <meta property="og:title" content="SuiteCraft — One Pass, Four Pro Tools" />
+  <meta property="og:description" content="AI Resume, Invoicing, PDF, and Image Restoration in one blazing-fast suite. No hidden paywalls for basic use." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://suitecraft.app/" />
+  <meta property="og:image" content="https://suitecraft.app/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SuiteCraft — One Pass, Four Pro Tools" />
+  <meta name="twitter:description" content="AI Resume, Invoicing, PDF, and Image Restoration in one blazing-fast suite." />
+  <meta name="twitter:image" content="https://suitecraft.app/og-image.png" />
+
+  <!-- Structured data for rich crawling -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SuiteCraft",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "9",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is SuiteCraft really free to start?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every tool has a free tier with core features and no credit card required. Upgrade to the All-Access Pass only when you need pro limits or premium templates." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you store my files or data?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most processing happens client-side in your browser. Files you upload for AI restoration or OCR are processed securely and are not retained after your session." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I cancel the All-Access Pass anytime?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, cancel anytime from your account settings. You keep every export you've already generated, no questions asked." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which file formats are supported?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Resumes export to PDF and DOCX, invoices export to PDF, the PDF suite handles merge, split, compress and OCR, and the image tool accepts JPG, PNG and WEBP." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,system-ui,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}:root{color-scheme:dark}html{scroll-behavior:smooth}body{-webkit-font-smoothing:antialiased}::-moz-selection{background:rgba(56,189,248,.3)}::selection{background:rgba(56,189,248,.3)}:focus-visible{outline:2px solid #38bdf8;outline-offset:2px;border-radius:4px}.aurora{background:radial-gradient(600px circle at 15% 10%,rgba(56,189,248,.14),transparent 45%),radial-gradient(600px circle at 85% 20%,rgba(139,92,246,.14),transparent 45%),radial-gradient(700px circle at 50% 90%,rgba(45,212,191,.1),transparent 50%)}.neon-border{position:relative}.neon-border:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(56,189,248,.5),rgba(139,92,246,.4),rgba(45,212,191,.35));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.35;transition:opacity .3s ease;pointer-events:none}.neon-border:hover:before{opacity:.9}.grid-pattern{background-image:linear-gradient(90deg,rgba(148,163,184,.06) 1px,transparent 0),linear-gradient(180deg,rgba(148,163,184,.06) 1px,transparent 0);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0,#000 40%,transparent 100%);mask-image:radial-gradient(ellipse 80% 60% at 50% 0,#000 40%,transparent 100%)}.blob{filter:blur(64px);opacity:.55}.shine-btn{position:relative;overflow:hidden}.shine-btn:after{content:"";position:absolute;top:0;left:-150%;width:60%;height:100%;background:linear-gradient(120deg,transparent,hsla(0,0%,100%,.5),transparent);transform:skewX(-20deg);transition:left .75s ease}.shine-btn:hover:after{left:150%}.tilt-card{transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s ease,border-color .4s ease;transform-style:preserve-3d}.text-gradient-animated{background-size:200% auto;-webkit-background-clip:text;background-clip:text}.marquee-track{display:flex;width:-moz-max-content;width:max-content}.glass{background:rgba(15,23,42,.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}.skip-link{position:absolute;left:-9999px;top:0;z-index:100}.skip-link:focus{left:1rem;top:1rem;background:#38bdf8;color:#0b1120;padding:.5rem 1rem;border-radius:.5rem;font-weight:600}@media (prefers-reduced-motion:no-preference){.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.reveal.in{opacity:1;transform:none}}@media (prefers-reduced-motion:reduce){.animate-blob,.animate-blob-slow,.animate-float,.animate-gradient-x,.animate-marquee,.animate-pulse-slow,.animate-shimmer,.animate-wiggle{animation:none!important}}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.inset-x-0{left:0;right:0}.-bottom-0\.5{bottom:-.125rem}.-left-24{left:-6rem}.-right-16{right:-4rem}.-top-3{top:-.75rem}.bottom-0{bottom:0}.left-0{left:0}.left-1{left:.25rem}.left-1\/2{left:50%}.left-1\/3{left:33.333333%}.left-8{left:2rem}.right-0{right:0}.top-0{top:0}.top-1{top:.25rem}.top-1\/2{top:50%}.top-10{top:2.5rem}.top-24{top:6rem}.top-6{top:1.5rem}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.col-span-2{grid-column:span 2/span 2}.mx-auto{margin-left:auto;margin-right:auto}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:.25rem}.ml-3{margin-left:.75rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-14{margin-top:3.5rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-7{margin-top:1.75rem}.mt-8{margin-top:2rem}.mt-9{margin-top:2.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.inline-grid{display:inline-grid}.hidden{display:none}.h-1\.5{height:.375rem}.h-10{height:2.5rem}.h-12{height:3rem}.h-16{height:4rem}.h-2\.5{height:.625rem}.h-20{height:5rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-64{height:16rem}.h-7{height:1.75rem}.h-72{height:18rem}.h-8{height:2rem}.h-80{height:20rem}.h-9{height:2.25rem}.h-px{height:1px}.min-h-0{min-height:0}.w-0{width:0}.w-1\.5{width:.375rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-2\.5{width:.625rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-64{width:16rem}.w-72{width:18rem}.w-8{width:2rem}.w-80{width:20rem}.w-9{width:2.25rem}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.max-w-xl{max-width:36rem}.max-w-xs{max-width:20rem}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.animate-blob{animation:blob 14s ease-in-out infinite}@keyframes blob{0%,to{transform:translate(0) scale(1)}33%{transform:translate(30px,-40px) scale(1.1)}66%{transform:translate(-20px,20px) scale(.95)}}.animate-blob-slow{animation:blob 20s ease-in-out infinite reverse}@keyframes float{0%,to{transform:translateY(0)}50%{transform:translateY(-12px)}}.animate-float{animation:float 6s ease-in-out infinite}@keyframes gradient-x{0%,to{background-position:0 50%}50%{background-position:100% 50%}}.animate-gradient-x{animation:gradient-x 6s ease infinite}@keyframes marquee{0%{transform:translateX(0)}to{transform:translateX(-50%)}}.animate-marquee{animation:marquee 28s linear infinite}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse-slow{animation:pulse 3.5s cubic-bezier(.4,0,.6,1) infinite}.cursor-pointer{cursor:pointer}.list-disc{list-style-type:disc}.list-none{list-style-type:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-rows-\[0fr\]{grid-template-rows:0fr}.grid-rows-\[1fr\]{grid-template-rows:1fr}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.place-items-center{place-items:center}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-7{gap:1.75rem}.gap-8{gap:2rem}.gap-x-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.gap-x-8{-moz-column-gap:2rem;column-gap:2rem}.gap-y-3{row-gap:.75rem}.space-y-10>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-500\/20{border-color:rgba(245,158,11,.2)}.border-emerald-500\/20{border-color:rgba(16,185,129,.2)}.border-rose-500\/20{border-color:rgba(244,63,94,.2)}.border-sky-500\/20{border-color:rgba(14,165,233,.2)}.border-sky-500\/30{border-color:rgba(14,165,233,.3)}.border-teal-500\/30{border-color:rgba(20,184,166,.3)}.border-violet-500\/20{border-color:rgba(139,92,246,.2)}.border-violet-500\/30{border-color:rgba(139,92,246,.3)}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.border-white\/15{border-color:hsla(0,0%,100%,.15)}.border-white\/5{border-color:hsla(0,0%,100%,.05)}.bg-amber-400\/70{background-color:rgba(251,191,36,.7)}.bg-amber-500\/5{background-color:rgba(245,158,11,.05)}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.bg-emerald-400\/70{background-color:rgba(52,211,153,.7)}.bg-emerald-500\/10{background-color:rgba(16,185,129,.1)}.bg-rose-400{--tw-bg-opacity:1;background-color:rgb(251 113 133/var(--tw-bg-opacity,1))}.bg-rose-400\/70{background-color:rgba(251,113,133,.7)}.bg-rose-500\/10{background-color:rgba(244,63,94,.1)}.bg-sky-400{--tw-bg-opacity:1;background-color:rgb(56 189 248/var(--tw-bg-opacity,1))}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233/var(--tw-bg-opacity,1))}.bg-sky-500\/10{background-color:rgba(14,165,233,.1)}.bg-slate-900\/30{background-color:rgba(15,23,42,.3)}.bg-slate-900\/40{background-color:rgba(15,23,42,.4)}.bg-slate-900\/50{background-color:rgba(15,23,42,.5)}.bg-slate-900\/60{background-color:rgba(15,23,42,.6)}.bg-slate-900\/70{background-color:rgba(15,23,42,.7)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(11 17 32/var(--tw-bg-opacity,1))}.bg-slate-950\/80{background-color:rgba(11,17,32,.8)}.bg-slate-950\/95{background-color:rgba(11,17,32,.95)}.bg-teal-400{--tw-bg-opacity:1;background-color:rgb(45 212 191/var(--tw-bg-opacity,1))}.bg-violet-400{--tw-bg-opacity:1;background-color:rgb(167 139 250/var(--tw-bg-opacity,1))}.bg-violet-500{--tw-bg-opacity:1;background-color:rgb(139 92 246/var(--tw-bg-opacity,1))}.bg-violet-500\/10{background-color:rgba(139,92,246,.1)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/5{background-color:hsla(0,0%,100%,.05)}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-emerald-500\/10{--tw-gradient-from:rgba(16,185,129,.1) var(--tw-gradient-from-position);--tw-gradient-to:rgba(16,185,129,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-rose-500\/10{--tw-gradient-from:rgba(244,63,94,.1) var(--tw-gradient-from-position);--tw-gradient-to:rgba(244,63,94,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-sky-400{--tw-gradient-from:#38bdf8 var(--tw-gradient-from-position);--tw-gradient-to:rgba(56,189,248,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-sky-500\/10{--tw-gradient-from:rgba(14,165,233,.1) var(--tw-gradient-from-position);--tw-gradient-to:rgba(14,165,233,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-violet-500\/10{--tw-gradient-from:rgba(139,92,246,.1) var(--tw-gradient-from-position);--tw-gradient-to:rgba(139,92,246,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-cyan-300{--tw-gradient-to:rgba(103,232,249,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#67e8f9 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-white\/10{--tw-gradient-to:hsla(0,0%,100%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),hsla(0,0%,100%,.1) var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.to-violet-400{--tw-gradient-to:#a78bfa var(--tw-gradient-to-position)}.to-violet-500{--tw-gradient-to:#8b5cf6 var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}.p-8{padding:2rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-14{padding-top:3.5rem;padding-bottom:3.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-14{padding-bottom:3.5rem}.pb-16{padding-bottom:4rem}.pb-20{padding-bottom:5rem}.pb-3{padding-bottom:.75rem}.pl-5{padding-left:1.25rem}.pt-2{padding-top:.5rem}.pt-20{padding-top:5rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.font-sans{font-family:Inter,system-ui,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.05\]{line-height:1.05}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-.025em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.text-amber-200{--tw-text-opacity:1;color:rgb(253 230 138/var(--tw-text-opacity,1))}.text-amber-200\/90{color:hsla(48,97%,77%,.9)}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-rose-300{--tw-text-opacity:1;color:rgb(253 164 175/var(--tw-text-opacity,1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133/var(--tw-text-opacity,1))}.text-sky-300{--tw-text-opacity:1;color:rgb(125 211 252/var(--tw-text-opacity,1))}.text-sky-400{--tw-text-opacity:1;color:rgb(56 189 248/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-950{--tw-text-opacity:1;color:rgb(11 17 32/var(--tw-text-opacity,1))}.text-teal-400{--tw-text-opacity:1;color:rgb(45 212 191/var(--tw-text-opacity,1))}.text-transparent{color:transparent}.text-violet-300{--tw-text-opacity:1;color:rgb(196 181 253/var(--tw-text-opacity,1))}.text-violet-400{--tw-text-opacity:1;color:rgb(167 139 250/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.opacity-60{opacity:.6}.shadow-glow{--tw-shadow:0 0 40px -8px rgba(56,189,248,.35);--tw-shadow-colored:0 0 40px -8px var(--tw-shadow-color)}.shadow-glow,.shadow-glow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-glow-lg{--tw-shadow:0 0 80px -12px rgba(56,189,248,.45);--tw-shadow-colored:0 0 80px -12px var(--tw-shadow-color)}.shadow-glow-violet{--tw-shadow:0 0 40px -8px rgba(139,92,246,.35);--tw-shadow-colored:0 0 40px -8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-inset{--tw-ring-inset:inset}.ring-emerald-500\/20{--tw-ring-color:rgba(16,185,129,.2)}.ring-rose-500\/20{--tw-ring-color:rgba(244,63,94,.2)}.ring-sky-500\/20{--tw-ring-color:rgba(14,165,233,.2)}.ring-violet-500\/20{--tw-ring-color:rgba(139,92,246,.2)}.ring-white\/10{--tw-ring-color:hsla(0,0%,100%,.1)}.blur{--tw-blur:blur(8px)}.blur,.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.\[mask-image\:linear-gradient\(to_right\2c transparent\2c black_10\%\2c black_90\%\2c transparent\)\]{-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}.marker\:content-none ::marker{--tw-content:none;content:var(--tw-content)}.marker\:content-none::marker{--tw-content:none;content:var(--tw-content)}.selection\:bg-sky-500\/30 ::-moz-selection{background-color:rgba(14,165,233,.3)}.selection\:bg-sky-500\/30 ::selection{background-color:rgba(14,165,233,.3)}.selection\:bg-sky-500\/30::-moz-selection{background-color:rgba(14,165,233,.3)}.selection\:bg-sky-500\/30::selection{background-color:rgba(14,165,233,.3)}.open\:border-sky-500\/30[open]{border-color:rgba(14,165,233,.3)}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem}.hover\:-translate-y-0\.5:hover,.hover\:-translate-y-1\.5:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1\.5:hover{--tw-translate-y:-0.375rem}.hover\:border-emerald-500\/30:hover{border-color:rgba(16,185,129,.3)}.hover\:border-rose-500\/30:hover{border-color:rgba(244,63,94,.3)}.hover\:border-sky-500\/30:hover{border-color:rgba(14,165,233,.3)}.hover\:border-violet-500\/30:hover{border-color:rgba(139,92,246,.3)}.hover\:border-white\/20:hover{border-color:hsla(0,0%,100%,.2)}.hover\:bg-emerald-300:hover{--tw-bg-opacity:1;background-color:rgb(110 231 183/var(--tw-bg-opacity,1))}.hover\:bg-rose-300:hover{--tw-bg-opacity:1;background-color:rgb(253 164 175/var(--tw-bg-opacity,1))}.hover\:bg-sky-300:hover{--tw-bg-opacity:1;background-color:rgb(125 211 252/var(--tw-bg-opacity,1))}.hover\:bg-violet-300:hover{--tw-bg-opacity:1;background-color:rgb(196 181 253/var(--tw-bg-opacity,1))}.hover\:bg-white\/10:hover{background-color:hsla(0,0%,100%,.1)}.hover\:bg-white\/15:hover{background-color:hsla(0,0%,100%,.15)}.hover\:bg-white\/5:hover{background-color:hsla(0,0%,100%,.05)}.hover\:text-sky-400:hover{--tw-text-opacity:1;color:rgb(56 189 248/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.hover\:shadow-glow:hover{--tw-shadow:0 0 40px -8px rgba(56,189,248,.35);--tw-shadow-colored:0 0 40px -8px var(--tw-shadow-color)}.hover\:shadow-glow-lg:hover,.hover\:shadow-glow:hover{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-glow-lg:hover{--tw-shadow:0 0 80px -12px rgba(56,189,248,.45);--tw-shadow-colored:0 0 80px -12px var(--tw-shadow-color)}.hover\:brightness-110:hover{--tw-brightness:brightness(1.1);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.group[open] .group-open\:rotate-45{--tw-rotate:45deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:w-full{width:100%}.group:hover .group-hover\:-translate-y-0\.5{--tw-translate-y:-0.125rem}.group:hover .group-hover\:-translate-y-0\.5,.group:hover .group-hover\:translate-x-0\.5{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-0\.5{--tw-translate-x:0.125rem}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width:640px){.sm\:col-span-1{grid-column:span 1/span 1}.sm\:block{display:block}.sm\:inline-block{display:inline-block}.sm\:hidden{display:none}.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-4{padding:1rem}.sm\:py-16{padding-top:4rem;padding-bottom:4rem}.sm\:py-20{padding-top:5rem;padding-bottom:5rem}.sm\:py-24{padding-top:6rem;padding-bottom:6rem}.sm\:pt-28{padding-top:7rem}.sm\:text-left{text-align:left}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width:768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:col-span-2{grid-column:span 2/span 2}.lg\:col-span-3{grid-column:span 3/span 3}.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}}
+</style>
+</head>
+
+<body class="bg-slate-950 text-slate-200 font-sans selection:bg-sky-500/30">
+  <a href="#top" class="skip-link">Skip to content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5" aria-label="Primary">
+      <a href="#top" class="flex items-center gap-2.5 font-extrabold text-white">
+        <span class="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-sky-400 to-violet-500 text-slate-950 shadow-glow" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6h-6z"/><path d="M4 14h6v6H4z"/><path d="M17 17l3 3"/><path d="M4 4h6v6H4z"/></svg>
+        </span>
+        <span class="text-lg tracking-tight">Suite<span class="text-sky-400">Craft</span></span>
+      </a>
+
+      <ul class="hidden items-center gap-7 text-sm font-medium text-slate-400 md:flex">
+        <li><a href="/resume" class="group relative py-1 transition hover:text-white">Resume<span class="absolute -bottom-0.5 left-0 h-px w-0 bg-gradient-to-r from-sky-400 to-violet-500 transition-all duration-300 group-hover:w-full"></span></a></li>
+        <li><a href="/invoice" class="group relative py-1 transition hover:text-white">Invoice<span class="absolute -bottom-0.5 left-0 h-px w-0 bg-gradient-to-r from-sky-400 to-violet-500 transition-all duration-300 group-hover:w-full"></span></a></li>
+        <li><a href="/pdf" class="group relative py-1 transition hover:text-white">PDF Suite<span class="absolute -bottom-0.5 left-0 h-px w-0 bg-gradient-to-r from-sky-400 to-violet-500 transition-all duration-300 group-hover:w-full"></span></a></li>
+        <li><a href="/image" class="group relative py-1 transition hover:text-white">Image AI<span class="absolute -bottom-0.5 left-0 h-px w-0 bg-gradient-to-r from-sky-400 to-violet-500 transition-all duration-300 group-hover:w-full"></span></a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="#pricing" class="shine-btn hidden rounded-lg bg-gradient-to-r from-sky-400 to-violet-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-glow transition hover:brightness-110 sm:inline-block">
+          Get All-Access Pass
+        </a>
+        <button id="menuBtn" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:bg-white/5 md:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="menuIconOpen" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="menuIconClose" class="hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="grid grid-rows-[0fr] overflow-hidden border-white/5 bg-slate-950/95 transition-all duration-300 ease-out md:hidden">
+      <div class="min-h-0">
+        <ul class="flex flex-col gap-1 border-t border-white/5 px-5 py-4 text-sm font-medium">
+          <li><a href="/resume" class="block rounded-lg px-3 py-2.5 text-slate-300 hover:bg-white/5">AI Resume Maker</a></li>
+          <li><a href="/invoice" class="block rounded-lg px-3 py-2.5 text-slate-300 hover:bg-white/5">Invoice &amp; Quote Generator</a></li>
+          <li><a href="/pdf" class="block rounded-lg px-3 py-2.5 text-slate-300 hover:bg-white/5">PDF Tool Suite</a></li>
+          <li><a href="/image" class="block rounded-lg px-3 py-2.5 text-slate-300 hover:bg-white/5">AI Image Sharpener &amp; Restorer</a></li>
+          <li class="pt-2"><a href="#pricing" class="block rounded-lg bg-gradient-to-r from-sky-400 to-violet-500 px-3 py-2.5 text-center font-semibold text-slate-950">Get All-Access Pass</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden aurora">
+      <div class="pointer-events-none absolute inset-0 grid-pattern" aria-hidden="true"></div>
+
+      <!-- animated blobs -->
+      <div class="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-sky-500 blob animate-blob" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-16 top-24 h-80 w-80 rounded-full bg-violet-500 blob animate-blob-slow" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-teal-400 blob animate-blob" style="animation-delay:-6s" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-7xl px-5 pb-20 pt-20 text-center sm:pt-28">
+
+        <div class="reveal in mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300">
+          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400"></span>
+          4 pro tools · 1 subscription · zero bloat
+        </div>
+
+        <h1 class="reveal in mx-auto max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl">
+          Do a week of busywork
+          <span class="animate-gradient-x bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent text-gradient-animated"> before your coffee cools.</span>
+        </h1>
+
+        <p class="reveal in mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg" style="transition-delay:.1s">
+          Resumes, invoices, PDFs, and image restoration—engineered for professionals who value speed and precision.
+          <span class="font-medium text-slate-200">No forced sign-ups, no bloated fees—just pro-tier tools.</span>
+        </p>
+
+        <div class="reveal in mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row" style="transition-delay:.2s">
+          <a href="#tools" class="w-full rounded-xl border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10 sm:w-auto">
+            Explore Free Tools
+          </a>
+          <a href="#pricing" class="shine-btn group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-400 to-violet-500 px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-glow transition hover:-translate-y-0.5 hover:brightness-110 sm:w-auto">
+            Go Premium
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-0.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="reveal in mx-auto mt-12 flex max-w-2xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs font-medium text-slate-500" style="transition-delay:.3s">
+          <span class="inline-flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free tier, forever</span>
+          <span class="inline-flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Client-side privacy</span>
+          <span class="inline-flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No credit card to start</span>
+        </div>
+
+        <!-- floating tool preview mockup -->
+        <div class="reveal in relative mx-auto mt-16 max-w-4xl" style="transition-delay:.35s">
+          <div class="neon-border glass rounded-2xl border border-white/10 p-3 shadow-glow-lg sm:p-4">
+            <div class="flex items-center gap-1.5 border-b border-white/5 px-2 pb-3">
+              <span class="h-2.5 w-2.5 rounded-full bg-rose-400/70"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-400/70"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-400/70"></span>
+              <span class="ml-3 truncate text-xs text-slate-500">suitecraft.app</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3 p-3 sm:grid-cols-4">
+
+              <!-- Resume illustration -->
+              <div class="animate-float overflow-hidden rounded-xl border border-sky-500/20 bg-gradient-to-b from-sky-500/10 to-transparent p-3 text-left" style="animation-delay:0s">
+                <svg viewBox="0 0 120 100" class="h-20 w-full" role="img" aria-label="Resume document preview with ATS score">
+                  <defs><linearGradient id="rGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs>
+                  <rect x="4" y="4" width="72" height="92" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-opacity=".25"/>
+                  <circle cx="20" cy="20" r="8" fill="url(#rGrad)"/>
+                  <rect x="34" y="14" width="34" height="4" rx="2" fill="#7dd3fc"/>
+                  <rect x="34" y="22" width="24" height="3" rx="1.5" fill="#334155"/>
+                  <rect x="10" y="38" width="58" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <rect x="10" y="46" width="46" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <rect x="10" y="54" width="52" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <rect x="10" y="66" width="30" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <rect x="10" y="74" width="40" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <circle cx="98" cy="30" r="22" fill="#0b1120" stroke="#38bdf8" stroke-width="3" stroke-dasharray="120" stroke-dashoffset="14" stroke-linecap="round" transform="rotate(-90 98 30)"/>
+                  <text x="98" y="27" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="700" font-family="Inter, sans-serif">98%</text>
+                  <text x="98" y="38" text-anchor="middle" fill="#7dd3fc" font-size="6" font-family="Inter, sans-serif">ATS</text>
+                </svg>
+                <p class="mt-2 text-xs font-semibold text-sky-300">Resume</p>
+              </div>
+
+              <!-- Invoice illustration -->
+              <div class="animate-float overflow-hidden rounded-xl border border-emerald-500/20 bg-gradient-to-b from-emerald-500/10 to-transparent p-3 text-left" style="animation-delay:.4s">
+                <svg viewBox="0 0 120 100" class="h-20 w-full" role="img" aria-label="Invoice document preview marked as paid">
+                  <rect x="4" y="4" width="80" height="92" rx="6" fill="#0f172a" stroke="#34d399" stroke-opacity=".25"/>
+                  <rect x="12" y="14" width="26" height="4" rx="2" fill="#6ee7b7"/>
+                  <rect x="12" y="24" width="18" height="3" rx="1.5" fill="#334155"/>
+                  <rect x="12" y="40" width="64" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <rect x="12" y="48" width="64" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <rect x="12" y="56" width="64" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <rect x="12" y="70" width="30" height="4" rx="2" fill="#334155"/>
+                  <rect x="50" y="70" width="26" height="4" rx="2" fill="#6ee7b7"/>
+                  <g transform="translate(92,20) rotate(-18)">
+                    <rect x="-20" y="-10" width="40" height="20" rx="4" fill="none" stroke="#34d399" stroke-width="2.5"/>
+                    <text x="0" y="4" text-anchor="middle" fill="#34d399" font-size="9" font-weight="800" font-family="Inter, sans-serif">PAID</text>
+                  </g>
+                </svg>
+                <p class="mt-2 text-xs font-semibold text-emerald-300">Invoice</p>
+              </div>
+
+              <!-- PDF illustration -->
+              <div class="animate-float overflow-hidden rounded-xl border border-rose-500/20 bg-gradient-to-b from-rose-500/10 to-transparent p-3 text-left" style="animation-delay:.8s">
+                <svg viewBox="0 0 120 100" class="h-20 w-full" role="img" aria-label="Stacked PDF pages being merged">
+                  <rect x="30" y="8" width="52" height="66" rx="5" fill="#1e293b" stroke="#fb7185" stroke-opacity=".2"/>
+                  <rect x="20" y="18" width="52" height="66" rx="5" fill="#0f172a" stroke="#fb7185" stroke-opacity=".3"/>
+                  <path d="M20 18 h52 v10 l-10 -10 z" fill="#fb7185" fill-opacity=".15"/>
+                  <rect x="30" y="34" width="32" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <rect x="30" y="42" width="32" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <rect x="30" y="50" width="22" height="2.5" rx="1.25" fill="#1e293b"/>
+                  <g stroke="#fb7185" stroke-width="3" stroke-linecap="round">
+                    <path d="M80 55 l14 -14 M94 41 l0 8 M94 41 l-8 0" fill="none"/>
+                    <path d="M90 78 l-14 14 M76 92 l0 -8 M76 92 l8 0" fill="none"/>
+                  </g>
+                  <circle cx="100" cy="20" r="11" fill="#fb7185"/>
+                  <text x="100" y="24" text-anchor="middle" fill="#0b1120" font-size="10" font-weight="800" font-family="Inter, sans-serif">12</text>
+                </svg>
+                <p class="mt-2 text-xs font-semibold text-rose-300">PDF Suite</p>
+              </div>
+
+              <!-- Image AI illustration -->
+              <div class="animate-float overflow-hidden rounded-xl border border-violet-500/20 bg-gradient-to-b from-violet-500/10 to-transparent p-3 text-left" style="animation-delay:1.2s">
+                <svg viewBox="0 0 120 100" class="h-20 w-full" role="img" aria-label="Blurry photo being restored to sharp AI-enhanced quality">
+                  <defs>
+                    <clipPath id="imgClip"><rect x="6" y="6" width="88" height="76" rx="6"/></clipPath>
+                    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c1d95"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+                  </defs>
+                  <g clip-path="url(#imgClip)">
+                    <rect x="6" y="6" width="44" height="76" fill="url(#skyGrad)" opacity=".55"/>
+                    <circle cx="24" cy="26" r="9" fill="#c4b5fd" opacity=".5" filter="blur(2px)"/>
+                    <path d="M6 66 L24 46 L38 60 L50 44 L50 82 L6 82 Z" fill="#312e81" opacity=".6" filter="blur(1.5px)"/>
+                    <rect x="50" y="6" width="44" height="76" fill="url(#skyGrad)"/>
+                    <circle cx="70" cy="24" r="9" fill="#f5d0fe"/>
+                    <path d="M50 66 L70 42 L82 58 L94 40 L94 82 L50 82 Z" fill="#1e1b4b"/>
+                  </g>
+                  <rect x="6" y="6" width="88" height="76" rx="6" fill="none" stroke="#a78bfa" stroke-opacity=".4"/>
+                  <line x1="50" y1="6" x2="50" y2="82" stroke="#e9d5ff" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <g transform="translate(100,14)">
+                    <path d="M0 -9 L2.2 -2.2 L9 0 L2.2 2.2 L0 9 L-2.2 2.2 L-9 0 L-2.2 -2.2 Z" fill="#f0abfc"/>
+                  </g>
+                </svg>
+                <p class="mt-2 text-xs font-semibold text-violet-300">Image AI</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ USE-CASE MARQUEE ============ -->
+    <section class="border-y border-white/5 bg-slate-900/40 py-6" aria-label="Who SuiteCraft is built for">
+      <div class="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div class="marquee-track animate-marquee gap-12 whitespace-nowrap text-sm font-semibold uppercase tracking-widest text-slate-600">
+          <span class="flex gap-12">
+            <span>Freelancers</span><span>·</span><span>Agencies</span><span>·</span><span>Job Seekers</span><span>·</span><span>Small Businesses</span><span>·</span><span>Consultants</span><span>·</span><span>Students</span><span>·</span><span>Photographers</span><span>·</span>
+          </span>
+          <span class="flex gap-12" aria-hidden="true">
+            <span>Freelancers</span><span>·</span><span>Agencies</span><span>·</span><span>Job Seekers</span><span>·</span><span>Small Businesses</span><span>·</span><span>Consultants</span><span>·</span><span>Students</span><span>·</span><span>Photographers</span><span>·</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENTO FEATURE ZONE ============ -->
+    <section id="tools" class="mx-auto max-w-7xl px-5 py-20 sm:py-24">
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <span class="text-xs font-semibold uppercase tracking-widest text-sky-400">The Toolkit</span>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">Four tools. One workflow.</h2>
+        <p class="mt-4 text-slate-400">Each built to eliminate a specific chore. Use them free, or unlock pro power with a single pass.</p>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2">
+
+        <!-- Card 1: Resume -->
+        <article class="tilt-card neon-border reveal group relative flex flex-col rounded-2xl border border-white/10 bg-slate-900/60 p-7 hover:-translate-y-1.5 hover:border-sky-500/30 hover:shadow-glow">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-xl bg-sky-500/10 text-sky-400 ring-1 ring-sky-500/20 transition group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white">AI Resume Maker</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">Generate a recruiter-ready resume in minutes—AI rewrites your bullet points to land interviews.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-sky-300 ring-1 ring-inset ring-white/10">ATS-Optimized</span>
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-sky-300 ring-1 ring-inset ring-white/10">AI Bullet Rewrites</span>
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-sky-300 ring-1 ring-inset ring-white/10">1-Click Export</span>
+          </div>
+          <a href="/resume" class="mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-sky-300">
+            Launch Tool
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Card 2: Invoice -->
+        <article class="tilt-card neon-border reveal group relative flex flex-col rounded-2xl border border-white/10 bg-slate-900/60 p-7 hover:-translate-y-1.5 hover:border-emerald-500/30" style="transition-delay:.05s">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-emerald-500/20 transition group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 2v20l-2-1.5L12 22l-2-1.5L8 22l-2-1.5L4 22V2l2 1.5L8 2l2 1.5L12 2l2 1.5L16 2Z"/><path d="M8 7h6"/><path d="M8 11h6"/><path d="M8 15h4"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Invoice &amp; Quote Generator</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">Send polished, tax-ready invoices and quotes that get you paid faster—no accounting software required.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-emerald-300 ring-1 ring-inset ring-white/10">Auto Tax &amp; Totals</span>
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-emerald-300 ring-1 ring-inset ring-white/10">Premium Templates</span>
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-emerald-300 ring-1 ring-inset ring-white/10">Multi-Currency</span>
+          </div>
+          <a href="/invoice" class="mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300">
+            Launch Tool
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Card 3: PDF -->
+        <article class="tilt-card neon-border reveal group relative flex flex-col rounded-2xl border border-white/10 bg-slate-900/60 p-7 hover:-translate-y-1.5 hover:border-rose-500/30" style="transition-delay:.1s">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-xl bg-rose-500/10 text-rose-400 ring-1 ring-rose-500/20 transition group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M9 15v-4"/><path d="M12 15v-2"/><path d="M15 15v-6"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white">PDF Tool Suite</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">Merge, split, compress, and convert PDFs instantly—files are processed securely and never stored.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-rose-300 ring-1 ring-inset ring-white/10">Unlimited Processing</span>
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-rose-300 ring-1 ring-inset ring-white/10">Batch Convert</span>
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-rose-300 ring-1 ring-inset ring-white/10">OCR Text</span>
+          </div>
+          <a href="/pdf" class="mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-rose-300">
+            Launch Tool
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Card 4: Image -->
+        <article class="tilt-card neon-border reveal group relative flex flex-col rounded-2xl border border-white/10 bg-slate-900/60 p-7 hover:-translate-y-1.5 hover:border-violet-500/30" style="transition-delay:.15s">
+          <div class="mb-5 grid h-12 w-12 place-items-center rounded-xl bg-violet-500/10 text-violet-400 ring-1 ring-violet-500/20 transition group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white">AI Image Sharpener &amp; Restorer</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400">Rescue blurry, old, or low-res photos—AI restores detail and upscales to crisp, print-ready quality.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-violet-300 ring-1 ring-inset ring-white/10">Up to 4K UHD</span>
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-violet-300 ring-1 ring-inset ring-white/10">Batch Upscaling</span>
+            <span class="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-violet-300 ring-1 ring-inset ring-white/10">Face Recovery</span>
+          </div>
+          <a href="/image" class="mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-violet-300">
+            Launch Tool
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="border-y border-white/5 bg-slate-900/30 py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <span class="text-xs font-semibold uppercase tracking-widest text-violet-400">The Process</span>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">From blank page to done, in three steps.</h2>
+        </div>
+
+        <div class="relative mt-14 grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div class="pointer-events-none absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-white/10 to-transparent sm:block" aria-hidden="true"></div>
+
+          <div class="reveal relative text-center sm:text-left">
+            <span class="relative z-10 mb-5 inline-grid h-12 w-12 place-items-center rounded-full border border-sky-500/30 bg-slate-950 text-sm font-bold text-sky-400">01</span>
+            <h3 class="text-lg font-semibold text-white">Pick your tool</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">Jump into Resume, Invoice, PDF, or Image AI directly—no account wall, no onboarding maze.</p>
+          </div>
+          <div class="reveal relative text-center sm:text-left" style="transition-delay:.1s">
+            <span class="relative z-10 mb-5 inline-grid h-12 w-12 place-items-center rounded-full border border-violet-500/30 bg-slate-950 text-sm font-bold text-violet-400">02</span>
+            <h3 class="text-lg font-semibold text-white">Let AI do the heavy lifting</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">Smart defaults, auto-formatting, and AI rewrites handle the tedious parts while you stay in control.</p>
+          </div>
+          <div class="reveal relative text-center sm:text-left" style="transition-delay:.2s">
+            <span class="relative z-10 mb-5 inline-grid h-12 w-12 place-items-center rounded-full border border-teal-500/30 bg-slate-950 text-sm font-bold text-teal-400">03</span>
+            <h3 class="text-lg font-semibold text-white">Export and move on</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">Download print-ready files in seconds. No watermarks on paid plans, ever.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section id="pricing" class="relative overflow-hidden border-y border-white/5 bg-slate-950 py-20 sm:py-24">
+      <div class="pointer-events-none absolute inset-0 aurora opacity-60" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-5xl px-5">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <span class="text-xs font-semibold uppercase tracking-widest text-sky-400">Pricing</span>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">One pass unlocks everything.</h2>
+          <p class="mt-4 text-slate-400">Stop juggling four subscriptions. The All-Access Pass turns on every pro feature across all four tools.</p>
+        </div>
+
+        <!-- billing toggle -->
+        <div class="reveal mt-8 flex items-center justify-center gap-3 text-sm font-medium" style="transition-delay:.05s">
+          <span id="labelMonthly" class="text-white">Monthly</span>
+          <button id="billingToggle" type="button" role="switch" aria-checked="false" aria-label="Toggle annual billing" class="relative h-7 w-14 rounded-full bg-white/10 transition hover:bg-white/15">
+            <span id="billingKnob" class="absolute left-1 top-1 h-5 w-5 rounded-full bg-gradient-to-r from-sky-400 to-violet-500 transition-transform duration-300"></span>
+          </button>
+          <span id="labelAnnual" class="text-slate-500">Annual <span class="ml-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-xs font-semibold text-emerald-300 ring-1 ring-emerald-500/20">Save 17%</span></span>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-5">
+
+          <!-- Free -->
+          <div class="reveal rounded-2xl border border-white/10 bg-slate-900/50 p-8 transition hover:border-white/20 lg:col-span-2">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400">Free</h3>
+            <p class="mt-3 text-4xl font-extrabold text-white">$0<span class="text-base font-medium text-slate-500">/forever</span></p>
+            <p class="mt-2 text-sm text-slate-400">Everything you need for everyday tasks. No card, no catch.</p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-300">
+              <li class="flex items-start gap-2.5"><svg class="mt-0.5 shrink-0 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> All 4 tools, core features</li>
+              <li class="flex items-start gap-2.5"><svg class="mt-0.5 shrink-0 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 1 resume &amp; standard templates</li>
+              <li class="flex items-start gap-2.5"><svg class="mt-0.5 shrink-0 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Basic PDF ops (5/day)</li>
+              <li class="flex items-start gap-2.5"><svg class="mt-0.5 shrink-0 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Image restore up to 1080p</li>
+            </ul>
+            <a href="#tools" class="mt-8 block rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10">Start Free</a>
+          </div>
+
+          <!-- Pro / All-Access -->
+          <div class="neon-border reveal relative rounded-2xl border border-sky-500/30 bg-slate-900/70 p-8 shadow-glow-violet transition hover:shadow-glow-lg lg:col-span-3" style="transition-delay:.1s">
+            <span class="absolute -top-3 left-8 rounded-full bg-gradient-to-r from-sky-400 to-violet-500 px-3 py-1 text-xs font-bold text-slate-950">ALL-ACCESS PASS</span>
+            <div class="flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-sky-400">Pro</h3>
+                <p class="mt-3 text-4xl font-extrabold text-white">
+                  <span id="priceAmount">$9</span><span id="priceSuffix" class="text-base font-medium text-slate-500">/month</span>
+                </p>
+                <p class="mt-2 text-sm text-slate-400">One subscription. Every pro feature. All four tools.</p>
+              </div>
+              <span class="rounded-lg bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300 ring-1 ring-emerald-500/20">Save 60% vs. buying separately</span>
+            </div>
+
+            <div class="mt-7 grid gap-x-6 gap-y-3 text-sm text-slate-200 sm:grid-cols-2">
+              <p class="flex items-start gap-2.5"><svg class="mt-0.5 shrink-0 text-sky-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Unlimited resumes + all templates</p>
+              <p class="flex items-start gap-2.5"><svg class="mt-0.5 shrink-0 text-sky-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Premium invoice &amp; quote templates</p>
+              <p class="flex items-start gap-2.5"><svg class="mt-0.5 shrink-0 text-sky-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Unlimited PDF processing + OCR</p>
+              <p class="flex items-start gap-2.5"><svg class="mt-0.5 shrink-0 text-sky-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Batch image upscaling to 4K UHD</p>
+              <p class="flex items-start gap-2.5"><svg class="mt-0.5 shrink-0 text-sky-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No watermarks, priority speed</p>
+              <p class="flex items-start gap-2.5"><svg class="mt-0.5 shrink-0 text-sky-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Cancel anytime, keep exports</p>
+            </div>
+
+            <a href="/pro" class="shine-btn mt-8 block rounded-xl bg-gradient-to-r from-sky-400 to-violet-500 px-5 py-3.5 text-center text-sm font-bold text-slate-950 shadow-glow transition hover:brightness-110">Get the All-Access Pass</a>
+            <p class="mt-3 text-center text-xs text-slate-500">7-day money-back guarantee · No hidden fees</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="mx-auto max-w-3xl px-5 py-20 sm:py-24">
+      <div class="reveal text-center">
+        <span class="text-xs font-semibold uppercase tracking-widest text-teal-400">FAQ</span>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">Questions, answered.</h2>
+      </div>
+
+      <div class="reveal mt-10 space-y-3" style="transition-delay:.1s">
+        <details class="group rounded-xl border border-white/10 bg-slate-900/50 p-5 open:border-sky-500/30">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-white marker:content-none">
+            Is SuiteCraft really free to start?
+            <svg class="h-4 w-4 shrink-0 text-slate-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Yes. Every tool has a free tier with core features and no credit card required. Upgrade to the All-Access Pass only when you need pro limits or premium templates.</p>
+        </details>
+        <details class="group rounded-xl border border-white/10 bg-slate-900/50 p-5 open:border-sky-500/30">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-white marker:content-none">
+            Do you store my files or data?
+            <svg class="h-4 w-4 shrink-0 text-slate-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Most processing happens client-side in your browser. Files you upload for AI restoration or OCR are processed securely and are not retained after your session.</p>
+        </details>
+        <details class="group rounded-xl border border-white/10 bg-slate-900/50 p-5 open:border-sky-500/30">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-white marker:content-none">
+            Can I cancel the All-Access Pass anytime?
+            <svg class="h-4 w-4 shrink-0 text-slate-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Yes, cancel anytime from your account settings. You keep every export you've already generated, no questions asked.</p>
+        </details>
+        <details class="group rounded-xl border border-white/10 bg-slate-900/50 p-5 open:border-sky-500/30">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-white marker:content-none">
+            Which file formats are supported?
+            <svg class="h-4 w-4 shrink-0 text-slate-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Resumes export to PDF and DOCX, invoices export to PDF, the PDF suite handles merge, split, compress and OCR, and the image tool accepts JPG, PNG and WEBP.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="relative mx-auto max-w-3xl overflow-hidden px-5 py-20 text-center sm:py-24">
+      <div class="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500 blob animate-pulse-slow" aria-hidden="true"></div>
+      <div class="reveal relative">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to reclaim your afternoon?</h2>
+        <p class="mt-4 text-slate-400">Try any tool free right now—upgrade only when you need pro power.</p>
+        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="#tools" class="rounded-xl border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10">Explore Free Tools</a>
+          <a href="#pricing" class="shine-btn rounded-xl bg-gradient-to-r from-sky-400 to-violet-500 px-6 py-3.5 text-sm font-bold text-slate-950 shadow-glow transition hover:-translate-y-0.5 hover:brightness-110">Go Premium</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-white/5 bg-slate-950">
+    <div class="mx-auto max-w-7xl px-5 py-14">
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-4">
+        <div class="col-span-2 sm:col-span-1">
+          <a href="#top" class="flex items-center gap-2.5 font-extrabold text-white">
+            <span class="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-sky-400 to-violet-500 text-slate-950" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6h-6z"/><path d="M4 14h6v6H4z"/><path d="M17 17l3 3"/><path d="M4 4h6v6H4z"/></svg>
+            </span>
+            <span>Suite<span class="text-sky-400">Craft</span></span>
+          </a>
+          <p class="mt-4 max-w-xs text-sm text-slate-500">Pro-tier digital utilities in one blazing-fast suite. Built for people who ship.</p>
+        </div>
+
+        <nav aria-label="Tools">
+          <h3 class="text-sm font-semibold text-white">Tools</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-400">
+            <li><a href="/resume" class="transition hover:text-sky-400">AI Resume Maker</a></li>
+            <li><a href="/invoice" class="transition hover:text-sky-400">Invoice &amp; Quote Generator</a></li>
+            <li><a href="/pdf" class="transition hover:text-sky-400">PDF Tool Suite</a></li>
+            <li><a href="/image" class="transition hover:text-sky-400">AI Image Sharpener &amp; Restorer</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Product">
+          <h3 class="text-sm font-semibold text-white">Product</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-400">
+            <li><a href="#pricing" class="transition hover:text-sky-400">Pricing</a></li>
+            <li><a href="/pro" class="transition hover:text-sky-400">All-Access Pass</a></li>
+            <li><a href="#tools" class="transition hover:text-sky-400">Features</a></li>
+            <li><a href="#faq" class="transition hover:text-sky-400">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Company">
+          <h3 class="text-sm font-semibold text-white">Company</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-400">
+            <li><a href="/about" class="transition hover:text-sky-400">About</a></li>
+            <li><a href="/privacy" class="transition hover:text-sky-400">Privacy</a></li>
+            <li><a href="/terms" class="transition hover:text-sky-400">Terms</a></li>
+            <li><a href="/contact" class="transition hover:text-sky-400">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-sm text-slate-500 sm:flex-row">
+        <p>© <span id="year"></span> SuiteCraft. All rights reserved.</p>
+        <p>Made for professionals who value their time.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- sticky mobile CTA -->
+  <div class="glass fixed inset-x-0 bottom-0 z-40 border-t border-white/10 px-5 py-3 sm:hidden">
+    <a href="#pricing" class="shine-btn block rounded-xl bg-gradient-to-r from-sky-400 to-violet-500 px-5 py-3 text-center text-sm font-bold text-slate-950 shadow-glow">Get the All-Access Pass</a>
+  </div>
+  <div class="h-16 sm:hidden" aria-hidden="true"></div>
+
+  <script>
+    // Mobile menu toggle (animated height)
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const iconOpen = document.getElementById('menuIconOpen');
+    const iconClose = document.getElementById('menuIconClose');
+    let menuOpen = false;
+    menuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('grid-rows-[1fr]', menuOpen);
+      mobileMenu.classList.toggle('grid-rows-[0fr]', !menuOpen);
+      iconOpen.classList.toggle('hidden', menuOpen);
+      iconClose.classList.toggle('hidden', !menuOpen);
+      menuBtn.setAttribute('aria-expanded', String(menuOpen));
+    });
+    mobileMenu.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.add('grid-rows-[0fr]');
+        mobileMenu.classList.remove('grid-rows-[1fr]');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      })
+    );
+
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll reveal
+    if (window.IntersectionObserver) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    }
+
+    // Billing toggle (monthly/annual)
+    const toggle = document.getElementById('billingToggle');
+    const knob = document.getElementById('billingKnob');
+    const priceAmount = document.getElementById('priceAmount');
+    const priceSuffix = document.getElementById('priceSuffix');
+    const labelMonthly = document.getElementById('labelMonthly');
+    const labelAnnual = document.getElementById('labelAnnual');
+    let annual = false;
+    toggle.addEventListener('click', () => {
+      annual = !annual;
+      toggle.setAttribute('aria-checked', String(annual));
+      knob.style.transform = annual ? 'translateX(28px)' : 'translateX(0)';
+      priceAmount.textContent = annual ? '$7.50' : '$9';
+      priceSuffix.textContent = annual ? '/mo, billed yearly' : '/month';
+      labelMonthly.classList.toggle('text-white', !annual);
+      labelMonthly.classList.toggle('text-slate-500', annual);
+      labelAnnual.classList.toggle('text-white', annual);
+      labelAnnual.classList.toggle('text-slate-500', !annual);
+    });
+  </script>
+</body>
+</html>
