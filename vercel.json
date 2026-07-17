@@ -1,4 +1,17 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/resume", "destination": "https://resumeaimaker-brown.vercel.app/" },
+    { "source": "/resume/:path*", "destination": "https://resumeaimaker-brown.vercel.app/:path*" },
+
+    { "source": "/invoice", "destination": "https://invoicequotenew.vercel.app/" },
+    { "source": "/invoice/:path*", "destination": "https://invoicequotenew.vercel.app/:path*" },
+
+    { "source": "/pdf", "destination": "https://pdfmanipulator.netlify.app/" },
+    { "source": "/pdf/:path*", "destination": "https://pdfmanipulator.netlify.app/:path*" },
+
+    { "source": "/image", "destination": "https://imageprocessor-delta.vercel.app/" },
+    { "source": "/image/:path*", "destination": "https://imageprocessor-delta.vercel.app/:path*" }
+  ]
 }
