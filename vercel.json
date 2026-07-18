@@ -8,6 +8,9 @@
     { "source": "/invoice", "destination": "https://invoicequotenew.vercel.app/" },
     { "source": "/invoice/:path*", "destination": "https://invoicequotenew.vercel.app/:path*" },
 
+    { "source": "/css/:path*", "destination": "https://invoicequotenew.vercel.app/css/:path*" },
+    { "source": "/js/:path*", "destination": "https://invoicequotenew.vercel.app/js/:path*" },
+
     { "source": "/pdf", "destination": "https://pdfmanipulator.netlify.app/" },
     { "source": "/pdf/:path*", "destination": "https://pdfmanipulator.netlify.app/:path*" },
 
