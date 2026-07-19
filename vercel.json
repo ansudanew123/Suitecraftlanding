@@ -10,9 +10,11 @@
 
     { "source": "/css/:path*", "destination": "https://invoicequotenew.vercel.app/css/:path*" },
     { "source": "/scripts/:path*", "destination": "https://invoicequotenew.vercel.app/scripts/:path*" },
-
-    { "source": "/pdf", "destination": "https://pdfmanipulator.netlify.app/" },
+{ "source": "/pdf", "destination": "https://pdfmanipulator.netlify.app/" },
     { "source": "/pdf/:path*", "destination": "https://pdfmanipulator.netlify.app/:path*" },
+    { "source": "/fixedjs.js", "destination": "https://pdfmanipulator.netlify.app/fixedjs.js" },
+    { "source": "/logosite.svg", "destination": "https://pdfmanipulator.netlify.app/logosite.svg" },
+    { "source": "/tuto.mp4", "destination": "https://pdfmanipulator.netlify.app/tuto.mp4" },
 
     { "source": "/image", "destination": "https://imageprocessor-delta.vercel.app/" },
     { "source": "/image/:path*", "destination": "https://imageprocessor-delta.vercel.app/:path*" }
