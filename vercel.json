@@ -16,7 +16,7 @@
     { "source": "/logosite.svg", "destination": "https://pdfmanipulator.netlify.app/logosite.svg" },
     { "source": "/tuto.mp4", "destination": "https://pdfmanipulator.netlify.app/tuto.mp4" },
 
-    { "source": "/image", "destination": "https://imageprocessor-delta.vercel.app/" },
-    { "source": "/image/:path*", "destination": "https://imageprocessor-delta.vercel.app/:path*" }
+    { "source": "/image", "destination": "https://imageupenhancer.vercel.app/" },
+    { "source": "/image/:path*", "destination": "https://imageupenhancer.vercel.app/:path*" }
   ]
 }
