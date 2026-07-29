@@ -334,36 +334,97 @@
       </div>
     </section>
 <!-- ============ 4. NEW: REAL SCREENSHOT SHOWCASE SECTION ============ -->
-<!-- Insert this AFTER the hero, BEFORE the marquee -->
-<section class="relative mx-auto max-w-6xl px-5 py-16">
-  <div class="reveal mx-auto max-w-2xl text-center mb-10">
-    <span class="text-xs font-semibold uppercase tracking-widest text-sky-400">See It In Action</span>
-    <h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">Beautiful tools. Zero learning curve.</h2>
+<!-- Browser mockup with SCROLLABLE screenshot strip + animated arrows -->
+<div class="reveal neon-border glass relative rounded-2xl border border-white/10 p-2 shadow-glow-lg">
+  <div class="flex items-center gap-1.5 border-b border-white/5 px-4 py-3">
+    <span class="h-3 w-3 rounded-full bg-rose-400/70"></span>
+    <span class="h-3 w-3 rounded-full bg-amber-400/70"></span>
+    <span class="h-3 w-3 rounded-full bg-emerald-400/70"></span>
+    <div class="mx-auto rounded-md bg-slate-800/50 px-4 py-1 text-xs text-slate-400">suitecraft.app</div>
   </div>
-  
-  <!-- Browser mockup with REAL screenshot slot -->
-  <div class="reveal neon-border glass rounded-2xl border border-white/10 p-2 shadow-glow-lg">
-    <div class="flex items-center gap-1.5 border-b border-white/5 px-4 py-3">
-      <span class="h-3 w-3 rounded-full bg-rose-400/70"></span>
-      <span class="h-3 w-3 rounded-full bg-amber-400/70"></span>
-      <span class="h-3 w-3 rounded-full bg-emerald-400/70"></span>
-      <div class="mx-auto rounded-md bg-slate-800/50 px-4 py-1 text-xs text-slate-400">suitecraft.app/resume</div>
+
+  <div class="relative">
+    <!-- scroll container -->
+    <div id="screensTrack"
+         class="flex gap-3 overflow-x-auto snap-x snap-mandatory rounded-b-xl p-3 scroll-smooth"
+         style="scrollbar-width:none;">
+
+      <img src=""Screenshot 2026-07-29 193633.png".png" alt="SuiteCraft AI Invoice & Quotaion screenshot"
+           class="w-[85%] sm:w-[70%] flex-shrink-0 snap-center rounded-lg border border-white/10"
+           loading="lazy" width="600" height="360" onerror="this.style.display='none'">
+
+      <img src="invoice-tool.png" alt="SuiteCraft Invoice & Quote Generator screenshot"
+           class="w-[85%] sm:w-[70%] flex-shrink-0 snap-center rounded-lg border border-white/10"
+           loading="lazy" width="600" height="360" onerror="this.style.display='none'">
+
+      <img src="pdf-tool.png" alt="SuiteCraft PDF Tool Suite screenshot"
+           class="w-[85%] sm:w-[70%] flex-shrink-0 snap-center rounded-lg border border-white/10"
+           loading="lazy" width="600" height="360" onerror="this.style.display='none'">
+
+      <img src="sharpener-tool.png" alt="SuiteCraft AI Image Sharpener screenshot"
+           class="w-[85%] sm:w-[70%] flex-shrink-0 snap-center rounded-lg border border-white/10"
+           loading="lazy" width="600" height="360" onerror="this.style.display='none'">
     </div>
-    <!-- 👇 REPLACE src WITH YOUR ACTUAL SCREENSHOT -->
-    <img 
-      src="Screenshot 2026-07-29 193633invoice3.png" 
-      alt="SuiteCraft AI Resume Maker showing a live resume editor with ATS score sidebar"
-      class="w-full rounded-b-xl"
-      loading="lazy"
-      width="600" height="300"
-      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-    >
-    <!-- Fallback placeholder (shows if image missing) -->
-    <div style="display:none;" class="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-b-xl grid place-items-center">
-      <p class="text-slate-500">📸 Insert screenshot: resume-tool-hero.png (1200×700)</p>
-    </div>
+
+    <!-- prev/next arrows -->
+    <button id="scrPrev" aria-label="Previous screenshot"
+      class="group absolute left-3 top-1/2 -translate-y-1/2 z-10 grid h-10 w-10 place-items-center
+             rounded-full border border-white/10 bg-slate-900/70 backdrop-blur
+             text-white opacity-0 transition-all duration-300
+             hover:scale-110 hover:border-sky-400/50 hover:bg-slate-900/90 hover:shadow-glow-lg">
+      <svg class="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <button id="scrNext" aria-label="Next screenshot"
+      class="group absolute right-3 top-1/2 -translate-y-1/2 z-10 grid h-10 w-10 place-items-center
+             rounded-full border border-white/10 bg-slate-900/70 backdrop-blur
+             text-white opacity-0 transition-all duration-300
+             hover:scale-110 hover:border-sky-400/50 hover:bg-slate-900/90 hover:shadow-glow-lg">
+      <svg class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
   </div>
-</section>
+</div>
+
+<style>
+  #screensTrack::-webkit-scrollbar { display: none; }
+</style>
+
+<script>
+  (function () {
+    const track = document.getElementById('screensTrack');
+    const prev = document.getElementById('scrPrev');
+    const next = document.getElementById('scrNext');
+    const wrap = track.closest('.relative');
+
+    function slideWidth() {
+      return track.querySelector('img').getBoundingClientRect().width + 12; // +gap
+    }
+    function updateArrows() {
+      const max = track.scrollWidth - track.clientWidth - 4;
+      prev.style.opacity = track.scrollLeft <= 4 ? '0.35' : '1';
+      next.style.opacity = track.scrollLeft >= max ? '0.35' : '1';
+    }
+
+    prev.addEventListener('click', () => track.scrollBy({ left: -slideWidth(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: slideWidth(), behavior: 'smooth' }));
+    track.addEventListener('scroll', updateArrows);
+
+    // fade arrows in on hover/touch, hide on mouseleave for desktop
+    wrap.addEventListener('mouseenter', () => { prev.style.opacity = '1'; next.style.opacity = '1'; updateArrows(); });
+    wrap.addEventListener('mouseleave', () => { prev.style.opacity = '0'; next.style.opacity = '0'; });
+
+    // always visible on touch devices (no hover)
+    if (window.matchMedia('(hover: none)').matches) {
+      prev.style.opacity = '1'; next.style.opacity = '1';
+    }
+
+    updateArrows();
+  })();
+</script>
 
 
     <!-- ============ USE-CASE MARQUEE ============ -->
