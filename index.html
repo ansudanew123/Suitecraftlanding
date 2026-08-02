@@ -396,18 +396,23 @@
 
 <style>
   #screensTrack::-webkit-scrollbar { display: none; }
-  #screensTrack {
-  display: flex;
-  overflow-x: auto;
+#screensTrack {
+  display: flex !important;
+  overflow-x: auto !important;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
+  flex-wrap: nowrap;
 }
 #screensTrack img {
+  width: 85% !important;
+  max-width: 85% !important;
+  flex: 0 0 auto;
   scroll-snap-align: center;
-  width: 85%;
 }
 @media (min-width: 640px) {
   #screensTrack img {
-    width: 70%;
+    width: 70% !important;
+    max-width: 70% !important;
   }
 }
 </style>
@@ -577,7 +582,7 @@
 
     <!-- ============ PRICING ============ -->
  <!-- ============ 7. URGENCY BADGE on Pro pricing card ============ -->
-<!-- Add this INSIDE the Pro pricing card, near the top -->
+<!-- Add this INSIDE the Pro pricing card, near the top -->e
 <div class="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-500/10 border border-amber-500/30 px-3 py-1.5 text-xs font-bold text-amber-300">
   <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>
   Save $240/yr vs Canva Pro + Adobe subscriptions
