@@ -85,6 +85,26 @@
   animation: pulseGlow 8s ease-in-out infinite;
 }
 
+  #screensTrack::-webkit-scrollbar { display: none; }
+#screensTrack {
+  display: flex !important;
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  flex-wrap: nowrap;
+}
+#screensTrack img {
+  width: 85% !important;
+  max-width: 85% !important;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+@media (min-width: 640px) {
+  #screensTrack img {
+    width: 70% !important;
+    max-width: 70% !important;
+  }
+}
     /* Smooth hover lift and glowing shadow for tool cards */
 .tilt-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -394,28 +414,7 @@
   </div>
 </div>
 
-<style>
-  #screensTrack::-webkit-scrollbar { display: none; }
-#screensTrack {
-  display: flex !important;
-  overflow-x: auto !important;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  flex-wrap: nowrap;
-}
-#screensTrack img {
-  width: 85% !important;
-  max-width: 85% !important;
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-}
-@media (min-width: 640px) {
-  #screensTrack img {
-    width: 70% !important;
-    max-width: 70% !important;
-  }
-}
-</style>
+
 
 <script>
   (function () {
