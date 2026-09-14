@@ -7,8 +7,8 @@
 
     { "source": "/invoice", "destination": "https://invoicequotenew.vercel.app/" },
     { "source": "/invoice/:path*", "destination": "https://invoicequotenew.vercel.app/:path*" },
-   { "source": "/image", "destination": "https://invoicequotenew.vercel.app/" },
-    { "source": "/image/:path*", "destination": "https://invoicequotenew.vercel.app/:path*" }
+   { "source": "/images", "destination": "https://invoicequotenew.vercel.app/" },
+    { "source": "/images/:path*", "destination": "https://invoicequotenew.vercel.app/:path*" }
   
     { "source": "/css/:path*", "destination": "https://invoicequotenew.vercel.app/css/:path*" },
     { "source": "/scripts/:path*", "destination": "https://invoicequotenew.vercel.app/scripts/:path*" },
