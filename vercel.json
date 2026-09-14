@@ -7,12 +7,12 @@
 
     { "source": "/invoice", "destination": "https://invoicequotenew.vercel.app/" },
     { "source": "/invoice/:path*", "destination": "https://invoicequotenew.vercel.app/:path*" },
-   { "source": "/images", "destination": "https://invoicequotenew.vercel.app/" },
-    { "source": "/images/:path*", "destination": "https://invoicequotenew.vercel.app/:path*" }
-  
+
+    { "source": "/images/:path*", "destination": "https://invoicequotenew.vercel.app/images/:path*" },
     { "source": "/css/:path*", "destination": "https://invoicequotenew.vercel.app/css/:path*" },
     { "source": "/scripts/:path*", "destination": "https://invoicequotenew.vercel.app/scripts/:path*" },
-{ "source": "/pdf", "destination": "https://pdfmanipulator.netlify.app/" },
+
+    { "source": "/pdf", "destination": "https://pdfmanipulator.netlify.app/" },
     { "source": "/pdf/:path*", "destination": "https://pdfmanipulator.netlify.app/:path*" },
     { "source": "/fixedjs.js", "destination": "https://pdfmanipulator.netlify.app/fixedjs.js" },
     { "source": "/logosite.svg", "destination": "https://pdfmanipulator.netlify.app/logosite.svg" },
